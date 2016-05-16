@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "todo-list",
-  "description": "todo-list",
+  "description": "todo-list with background",
   "version": "0.0.1",
   "icons": {
     "16": "images/icon/16.png",
@@ -22,11 +22,6 @@
       "./js/background.js"
     ],
     "persistent": true
-  },
-  "sandbox": {
-    "pages": [
-      "popup.html"
-    ]
   },
   "permissions": [
     "storage"

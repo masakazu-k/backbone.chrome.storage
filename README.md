@@ -3,7 +3,7 @@ A adaptor for Backbone.js with chrome-extention API(chrome.storage)
 
 ## Usage
 
-### Using without background.
+### Using without background(sample01).
 HTML:
 ```html
 <script type="text/javascript" src="backbone.js"></script>
@@ -26,8 +26,9 @@ var SampleCollection = Backbone.Collection.extend({
 
   // Any more.
 });
+```
 
-### Using with background(Not Work).
+### Using with background(sample02).
 For example.
 
 manifest.json:

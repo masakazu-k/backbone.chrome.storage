@@ -1,7 +1,7 @@
 
 var TodoView = Backbone.View.extend({
     model: Todo,
-    template: _.template($("#todo").html()),
+    tagName: "li",
 
     events: {
         "click #del": "del",
@@ -9,7 +9,11 @@ var TodoView = Backbone.View.extend({
     },
 
     render: function () {
-        this.$el.html(this.template(this.model.toJSON()));
+        var html = "<input type='checkbox' id='chk' " +
+            (this.model.get("done") ? "checked" : "") + "/>" +
+            this.model.get("text") +
+            "<button id='del'>del</button>";
+        this.$el.html(html);
         return this;
     },
 
