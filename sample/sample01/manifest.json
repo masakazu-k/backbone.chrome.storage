@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "todo-list",
+  "description": "todo-list",
+  "version": "0.0.1",
+  "icons": {
+    "16": "images/icon/16.png",
+    "48": "images/icon/48.png",
+    "128": "images/icon/128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon/19.png",
+      "38": "images/icon/38.png"
+    },
+    "default_title": "TODO LIST",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

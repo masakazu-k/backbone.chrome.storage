@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO LIST</title>
+
+</head>
+<!-- Backbone and others -->
+<script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="./js/lib/underscore.js"></script>
+<script type="text/javascript" src="./js/lib/backbone.js"></script>
+<script type="text/javascript" src="./js/lib/backbone.chrome.storage.API.js"></script>
+<script type="text/javascript" src="./js/lib/backbone.chrome.storage.js"></script>
+
+<body style="width:800px;">
+    <h1>TODO LIST</h1>
+    <div id="input">
+        <input type="text" id="text"></input>
+        <button id="add">add</button>
+    </div>
+    <ul id="todo-list">
+    </ul>
+
+</body>
+
+<!-- Application -->
+
+<!-- Template -->
+<script type="text/template" id="todo">
+    <!-- Tab -->
+    <li>
+        <input type="checkbox" id="chk" <% print(done? "checked": "")%>/>
+        <%=text%>
+            <button id="del">del</button>
+    </li>
+</script>
+
+<!-- MVC -->
+<script type="text/javascript" src="./js/app.model.js"></script>
+<script type="text/javascript" src="./js/app.view.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+
+</html>
