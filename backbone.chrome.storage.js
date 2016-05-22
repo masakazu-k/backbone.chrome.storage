@@ -9,17 +9,17 @@
     // In order to cope with the RequireJS, etc., for the time being implemented.
     // Behavior is unconfirmed.
     if (typeof define === "function" && define.amd) {
-        define(["backbone"], function (Backbone) {
-            root.Backbone = factory(Backbone || root.Backbone);
+        define(["backbone", "jquery"], function (Backbone, $) {
+            root.Backbone = factory(Backbone || root.Backbone, $);
             return root.Backbone;
         });
     } else if (typeof exports !== "undefined" && typeof require !== "undefined") {
-        module.exports = factory(require("backbone"));
+        module.exports = factory(require("backbone"), require("jquery"));
     } else {
-        root.Backbone = factory(Backbone);
+        root.Backbone = factory(Backbone, $);
     }
 
-} (this, function (Backbone) {
+} (this, function (Backbone, $) {
 
     Backbone.defaultSync = Backbone.sync;
 
