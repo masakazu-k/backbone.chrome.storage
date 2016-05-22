@@ -50,7 +50,7 @@
 
     var createid = function () {
         var date = new Date();
-        return String(Math.round(date.getTime() / 1000));
+        return String(Math.round(date.getTime()));
     };
 
     var modelMap = {
